@@ -4,10 +4,8 @@ describe 'Money::Dollar' do
   describe 'multiplication' do
     it do
       five_dollar = Money::Dollar.new(5)
-      product = five_dollar.times(2)
-      expect(product.amount).to eq 10
-      product = five_dollar.times(3)
-      expect(product.amount).to eq 15
+      expect(five_dollar.times(2).equals?(Money::Dollar.new(10))).to be_truthy
+      expect(five_dollar.times(3).equals?(Money::Dollar.new(15))).to be_truthy
     end
   end
 
