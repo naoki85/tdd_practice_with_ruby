@@ -1,7 +1,5 @@
 module Money
-  class Dollar
-    attr_reader :amount
-    
+  class Dollar < Money
     def initialize(amount)
       @amount = amount
     end
