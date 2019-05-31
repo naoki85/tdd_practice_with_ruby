@@ -15,6 +15,7 @@ describe 'Money::Franc' do
       expect(Money::Franc.new(5).equals?(Money::Franc.new(6))).to be_falsey
       DummyFranc = Struct.new(:amount)
       expect(Money::Franc.new(5).equals?(DummyFranc.new(5))).to be_falsey
+      expect(Money::Franc.new(5).equals?(Money::Dollar.new(5))).to be_falsey
     end
   end
 end
